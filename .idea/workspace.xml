@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cbb6768-2d40-48af-9274-fbed87aa1f78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnswerChildren.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnswerCityRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnswerStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnswerWedding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StudentOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CheckChildren.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CheckStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CityRegisterValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WeddingValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SaveStudentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SaveStudentOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StudentOrderValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentOrderValidator.java" afterDir="false" />
@@ -50,7 +48,7 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.SaveStudentOrder">
+  <component name="RunManager" selected="Application.StudentOrderValidator">
     <configuration name="SaveStudentOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SaveStudentOrder" />
       <module name="student-project" />
@@ -67,8 +65,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SaveStudentOrder" />
         <item itemvalue="Application.StudentOrderValidator" />
+        <item itemvalue="Application.SaveStudentOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -80,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652597002047</updated>
-      <workItem from="1652597007518" duration="2000000" />
+      <workItem from="1652597007518" duration="5596000" />
     </task>
     <servers />
   </component>
