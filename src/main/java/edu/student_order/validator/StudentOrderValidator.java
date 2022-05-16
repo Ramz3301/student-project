@@ -1,4 +1,7 @@
-import java.util.Date;
+package edu.student_order.validator;
+
+import edu.student_order.domain.*;
+import edu.student_order.mail.MailSender;
 
 public class StudentOrderValidator {
     public static void main(String[] args) {
@@ -16,7 +19,7 @@ public class StudentOrderValidator {
 
             AnswerCityRegister answerCityRegister = checkCityRegister(studentOrder);
 
-            if(!answerCityRegister.success) {
+            if (!answerCityRegister.success) {
                 break;
             }
 
@@ -29,7 +32,7 @@ public class StudentOrderValidator {
     }
 
     static void sendMail(StudentOrder studentOrder) {
-        System.out.println("Mail delivered");
+        new MailSender().sendMail(studentOrder);
     }
 
     static StudentOrder readStudentOrder() {
@@ -48,16 +51,19 @@ public class StudentOrderValidator {
 
     static AnswerWedding checkWedding(StudentOrder studentOrder) {
         WeddingValidator weddingValidator = new WeddingValidator();
-        weddingValidator.date = new Date("10.06.2018");
         AnswerWedding answerWedding = weddingValidator.checkWedding(studentOrder);
         return answerWedding;
     }
 
     static AnswerChildren checkChildren(StudentOrder studentOrder) {
-        return CheckChildren.checkChildren(studentOrder);
+        ChildrenValidator childrenValidator = new ChildrenValidator();
+        AnswerChildren answerChildren = childrenValidator.checkChildren(studentOrder);
+        return answerChildren;
     }
 
     static AnswerStudent checkStudent(StudentOrder studentOrder) {
-        return CheckStudent.checkStudent(studentOrder);
+        StudentValidator studentValidator = new StudentValidator();
+        AnswerStudent answerStudent = studentValidator.checkStudent(studentOrder);
+        return answerStudent;
     }
 }
