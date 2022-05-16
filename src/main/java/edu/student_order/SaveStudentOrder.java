@@ -6,10 +6,11 @@ import edu.student_order.domain.StudentOrder;
 
 public class SaveStudentOrder {
     public static void main(String[] args) {
-        StudentOrder sO = new StudentOrder();;
+//        StudentOrder sO = new StudentOrder();;
+        buildStudentOrder();
 
-        long answer = saveStudentOrder(sO);
-        System.out.println(answer);
+//        long answer = saveStudentOrder(sO);
+//        System.out.println(answer);
     }
 
     static long saveStudentOrder(StudentOrder studentOrder) {
@@ -21,11 +22,18 @@ public class SaveStudentOrder {
     static StudentOrder buildStudentOrder() {
         StudentOrder studentOrder = new StudentOrder();
         Adult husband = new Adult();
-        studentOrder.setHusband(husband);
-        Adult wife = new Adult();
-        studentOrder.setWife(wife);
-        Child child = new Child();
-        studentOrder.setChild(child);
+//        husband.setFirstName("Andrey");
+//        husband.setSurname("Petrov");
+//        husband.setPassportSerial("123264");
+//        studentOrder.setHusband(husband);
+//
+//        String answer = husband.getPersonString();
+//        System.out.println(answer);
+//
+//        Adult wife = new Adult();
+//        studentOrder.setWife(wife);
+//        Child child = new Child();
+//        studentOrder.setChild(child);
         return studentOrder;
     }
 }

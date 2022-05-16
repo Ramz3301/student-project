@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cbb6768-2d40-48af-9274-fbed87aa1f78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Adult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Child.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/mail/MailSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/ChildrenValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/StudentValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AnswerChildren.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/AnswerChildren.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AnswerCityRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/AnswerCityRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AnswerStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/AnswerStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AnswerWedding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/AnswerWedding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CheckChildren.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CheckStudent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CityRegisterValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/CityRegisterValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SaveStudentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/SaveStudentOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StudentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/StudentOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StudentOrderValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/StudentOrderValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeddingValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/WeddingValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/SaveStudentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/SaveStudentOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Adult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Adult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/StudentOrderValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/StudentOrderValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652597002047</updated>
       <workItem from="1652597007518" duration="7950000" />
-      <workItem from="1652695935411" duration="1900000" />
+      <workItem from="1652695935411" duration="4954000" />
     </task>
     <servers />
   </component>

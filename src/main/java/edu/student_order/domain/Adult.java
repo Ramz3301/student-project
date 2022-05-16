@@ -10,6 +10,19 @@ public class Adult extends Person {
     private String university;
     private String studentId;
 
+    public Adult() {
+        System.out.println("Adult is created");
+    }
+
+    public Adult(String surname, String firstName) {
+        super(surname, firstName);
+    }
+
+    @Override
+    public String getPersonString() {
+        return surname + " " + firstName + " " + passportSerial;
+    }
+
     public String getPassportSerial() {
         return passportSerial;
     }
