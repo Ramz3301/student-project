@@ -2,20 +2,22 @@ package edu.student_order.domain;
 
 import java.time.LocalDate;
 
-public class Person {
-    protected String surname;
-    protected String firstName;
+public abstract class Person {
+    private String surname;
+    private String firstName;
     private String patronymic;
     private LocalDate dateOfBirth;
     private Address address;
 
-
     public Person() {
-        System.out.println("Person is created");
+
     }
-    public Person(String surname, String firstName) {
+
+    public Person(String surname, String firstName, String patronymic, LocalDate dateOfBirth) {
         this.surname = surname;
         this.firstName = firstName;
+        this.patronymic = patronymic;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getPersonString() {

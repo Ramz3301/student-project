@@ -1,5 +1,6 @@
 package edu.student_order.validator;
 
+import edu.student_order.SaveStudentOrder;
 import edu.student_order.domain.*;
 import edu.student_order.mail.MailSender;
 
@@ -18,42 +19,45 @@ public class StudentOrderValidator {
         mailSender = new MailSender();
     }
 
-
     public static void main(String[] args) {
         StudentOrderValidator studentOrderValidator = new StudentOrderValidator();
         studentOrderValidator.checkAll();
     }
 
     public void checkAll() {
+        StudentOrder[] studentOrders = readStudentOrders();
 
-        while (true) {
-            StudentOrder studentOrder = readStudentOrder();
+//        for (int i = 0; i < studentOrder.length; i++) {
+//            System.out.println();
+//            checkOneOrder(studentOrder[i]);
+//        }
 
-            if (studentOrder == null) {
-                break;
-            }
-
-            AnswerCityRegister answerCityRegister = checkCityRegister(studentOrder);
-
-            if (!answerCityRegister.success) {
-                break;
-            }
-
-            AnswerWedding answerWedding = checkWedding(studentOrder);
-            AnswerChildren answerChildren = checkChildren(studentOrder);
-            AnswerStudent answerStudent = checkStudent(studentOrder);
-
-            sendMail(studentOrder);
+        for (StudentOrder studentOrder : studentOrders) {
+            System.out.println();
+            checkOneOrder(studentOrder);
         }
     }
 
-    public void sendMail(StudentOrder studentOrder) {
-         mailSender.sendMail(studentOrder);
+    public StudentOrder[] readStudentOrders() {
+        StudentOrder[] studentOrdersArray = new StudentOrder[3];
+
+        for (int i = 0; i < studentOrdersArray.length; i++) {
+            studentOrdersArray[i] = SaveStudentOrder.buildStudentOrder(i);
+        }
+
+        return studentOrdersArray;
     }
 
-    public StudentOrder readStudentOrder() {
-        StudentOrder studentOrder = new StudentOrder();
-        return studentOrder;
+    public void checkOneOrder(StudentOrder studentOrder) {
+        AnswerCityRegister answerCityRegister = checkCityRegister(studentOrder);
+        AnswerWedding answerWedding = checkWedding(studentOrder);
+        AnswerChildren answerChildren = checkChildren(studentOrder);
+        AnswerStudent answerStudent = checkStudent(studentOrder);
+        sendMail(studentOrder);
+    }
+
+    public void sendMail(StudentOrder studentOrder) {
+        mailSender.sendMail(studentOrder);
     }
 
     public AnswerCityRegister checkCityRegister(StudentOrder studentOrder) {
