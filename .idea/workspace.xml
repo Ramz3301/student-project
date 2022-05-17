@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cbb6768-2d40-48af-9274-fbed87aa1f78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/exception/TransportException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/register/FakeCityRegisterException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/exception/CityRegisterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/exception/CityRegisterException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/CityRegisterValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/CityRegisterValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/register/CityRegisterChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/register/CityRegisterChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/register/RealCityRegisterChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/register/RealCityRegisterChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/StudentOrderValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/StudentOrderValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +79,7 @@
       <workItem from="1652695935411" duration="7945000" />
       <workItem from="1652715218236" duration="2568000" />
       <workItem from="1652721820643" duration="299000" />
-      <workItem from="1652774373893" duration="11550000" />
+      <workItem from="1652774373893" duration="13079000" />
     </task>
     <servers />
   </component>
