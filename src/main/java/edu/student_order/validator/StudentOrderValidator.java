@@ -2,7 +2,14 @@ package edu.student_order.validator;
 
 import edu.student_order.SaveStudentOrder;
 import edu.student_order.domain.*;
+import edu.student_order.domain.children.AnswerChildren;
+import edu.student_order.domain.register.AnswerCityRegister;
+import edu.student_order.domain.student.AnswerStudent;
+import edu.student_order.domain.wedding.AnswerWedding;
 import edu.student_order.mail.MailSender;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class StudentOrderValidator {
     private CityRegisterValidator cityRegisterValidator;
@@ -25,21 +32,22 @@ public class StudentOrderValidator {
     }
 
     public void checkAll() {
-        StudentOrder[] studentOrders = readStudentOrders();
+        List<StudentOrder> studentOrders = readStudentOrders();
 
         for (StudentOrder studentOrder : studentOrders) {
             checkOneOrder(studentOrder);
         }
     }
 
-    public StudentOrder[] readStudentOrders() {
-        StudentOrder[] studentOrdersArray = new StudentOrder[3];
+    public List<StudentOrder> readStudentOrders() {
+        List<StudentOrder> orderList = new LinkedList<>();
 
-        for (int i = 0; i < studentOrdersArray.length; i++) {
-            studentOrdersArray[i] = SaveStudentOrder.buildStudentOrder(i);
+        for (int i = 0; i < orderList.size(); i++) {
+            StudentOrder studentOrder = SaveStudentOrder.buildStudentOrder(i);
+            orderList.add(studentOrder);
         }
 
-        return studentOrdersArray;
+        return orderList;
     }
 
     public void checkOneOrder(StudentOrder studentOrder) {

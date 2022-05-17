@@ -1,8 +1,8 @@
-package edu.student_order.validator;
+package edu.student_order.validator.register;
 
 import edu.student_order.domain.Adult;
 import edu.student_order.domain.Child;
-import edu.student_order.domain.CityRegisterCheckerResponse;
+import edu.student_order.domain.register.CityRegisterResponse;
 import edu.student_order.domain.Person;
 import edu.student_order.exception.CityRegisterException;
 
@@ -15,8 +15,8 @@ public class RealCityRegisterChecker implements CityRegisterChecker {
     public static final String ERROR_2 = "2002";
 
     @Override
-    public CityRegisterCheckerResponse checkPerson(Person person) throws CityRegisterException {
-        CityRegisterCheckerResponse response = new CityRegisterCheckerResponse();
+    public CityRegisterResponse checkPerson(Person person) throws CityRegisterException {
+        CityRegisterResponse response = new CityRegisterResponse();
 
         if (person instanceof Adult) {
             Adult adult = (Adult) person;

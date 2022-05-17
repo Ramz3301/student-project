@@ -1,6 +1,6 @@
 package edu.student_order.validator;
 
-import edu.student_order.domain.AnswerChildren;
+import edu.student_order.domain.children.AnswerChildren;
 import edu.student_order.domain.StudentOrder;
 
 public class ChildrenValidator {
