@@ -5,6 +5,7 @@ import edu.student_order.domain.Child;
 import edu.student_order.domain.register.CityRegisterResponse;
 import edu.student_order.domain.Person;
 import edu.student_order.exception.CityRegisterException;
+import edu.student_order.exception.TransportException;
 
 public class RealCityRegisterChecker implements CityRegisterChecker {
     public static final String GOOD_1 = "1000";
@@ -13,9 +14,12 @@ public class RealCityRegisterChecker implements CityRegisterChecker {
     public static final String BAD_2 = "2001";
     public static final String ERROR_1 = "1002";
     public static final String ERROR_2 = "2002";
+    public static final String ERROR_T_1 = "1003";
+    public static final String ERROR_T_2 = "2003";
 
     @Override
-    public CityRegisterResponse checkPerson(Person person) throws CityRegisterException {
+    public CityRegisterResponse checkPerson(Person person)
+            throws CityRegisterException, TransportException {
         CityRegisterResponse response = new CityRegisterResponse();
 
         if (person instanceof Adult) {
@@ -32,7 +36,12 @@ public class RealCityRegisterChecker implements CityRegisterChecker {
             }
 
             if (passportSerial.equals(ERROR_1) || passportSerial.equals(ERROR_2)) {
-                CityRegisterException exception = new CityRegisterException("Fake ERROR");
+                CityRegisterException exception = new CityRegisterException("1", "Fake ERROR");
+                throw exception;
+            }
+
+            if (passportSerial.equals(ERROR_T_1) || passportSerial.equals(ERROR_T_2)) {
+                TransportException exception = new TransportException("Transport ERROR");
                 throw exception;
             }
         }
