@@ -1,15 +1,14 @@
 package edu.student_order.validator;
 
 import edu.student_order.domain.AnswerCityRegister;
+import edu.student_order.domain.Child;
 import edu.student_order.domain.CityRegisterCheckerResponse;
 import edu.student_order.domain.StudentOrder;
 import edu.student_order.exception.CityRegisterException;
 
+import java.util.List;
+
 public class CityRegisterValidator {
-    public String hostName;
-    protected int port;
-    public String login;
-    String password;
     private CityRegisterChecker personChecker;
 
     public CityRegisterValidator() {
@@ -20,7 +19,11 @@ public class CityRegisterValidator {
         try {
             CityRegisterCheckerResponse husbandAnswer = personChecker.checkPerson(studentOrder.getHusband());
             CityRegisterCheckerResponse wifeAnswer = personChecker.checkPerson(studentOrder.getWife());
-            CityRegisterCheckerResponse childAnswer = personChecker.checkPerson(studentOrder.getChild());
+            List<Child> children = studentOrder.getChildren();
+
+            for (Child child : children) {
+                CityRegisterCheckerResponse childAnswer = personChecker.checkPerson(child);
+            }
         } catch (CityRegisterException ex) {
             ex.printStackTrace();
         }

@@ -7,8 +7,11 @@
     <list default="true" id="9cbb6768-2d40-48af-9274-fbed87aa1f78" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/SaveStudentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/SaveStudentOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/CityRegisterCheckerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/CityRegisterCheckerResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/StudentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/domain/StudentOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/CityRegisterValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/CityRegisterValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/RealCityRegisterChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/RealCityRegisterChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/StudentOrderValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/student_order/validator/StudentOrderValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +83,7 @@
       <workItem from="1652695935411" duration="7945000" />
       <workItem from="1652715218236" duration="2568000" />
       <workItem from="1652721820643" duration="299000" />
-      <workItem from="1652774373893" duration="1958000" />
+      <workItem from="1652774373893" duration="7649000" />
     </task>
     <servers />
   </component>
