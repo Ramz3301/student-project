@@ -1,12 +1,19 @@
 package edu.student_order;
 
+import edu.student_order.dao.DictionaryDaoImpl;
 import edu.student_order.domain.*;
+import edu.student_order.exception.DaoException;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.List;
 
 public class SaveStudentOrder {
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+    public static void main(String[] args) throws DaoException {
+        List<Street> d = new DictionaryDaoImpl().findStreets("a");
+        for (Street s : d) {
+            System.out.println(s.getStreetName());
+        }
 //        StudentOrder sO = new StudentOrder();;
 //        buildStudentOrder();
 //        long answer = saveStudentOrder(sO);
