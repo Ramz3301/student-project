@@ -56,34 +56,39 @@ public class StudentOrderDaoImpl implements StudentOrderDao {
         try (Connection connection = getConnection();
              PreparedStatement statement =
                      connection.prepareStatement(INSERT_ORDER, new String[]{"student_order_id"})) {
-            statement.setInt(1, StudentOrderStatus.START.ordinal());
-            statement.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now()));
 
-            Adult husband = studentOrder.getHusband();
-            setParamsForAdult(statement, 3, husband);
+            connection.setAutoCommit(false);
+            try {
+                statement.setInt(1, StudentOrderStatus.START.ordinal());
+                statement.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now()));
 
-            Adult wife = studentOrder.getWife();
-            setParamsForAdult(statement, 16, wife);
+                Adult husband = studentOrder.getHusband();
+                setParamsForAdult(statement, 3, husband);
 
-            // Marriage
-            statement.setString(29, studentOrder.getMarriageCertificateId());
-            statement.setLong(30, studentOrder.getMarriageOffice().getOfficeId());
-            statement.setDate(31, Date.valueOf(studentOrder.getMarriageDate()));
+                Adult wife = studentOrder.getWife();
+                setParamsForAdult(statement, 16, wife);
 
-            statement.executeUpdate();
+                // Marriage
+                statement.setString(29, studentOrder.getMarriageCertificateId());
+                statement.setLong(30, studentOrder.getMarriageOffice().getOfficeId());
+                statement.setDate(31, Date.valueOf(studentOrder.getMarriageDate()));
 
-            ResultSet generatedKeys = statement.getGeneratedKeys();
-            if (generatedKeys.next()) {
-                result = generatedKeys.getLong(1);
+                statement.executeUpdate();
+
+                ResultSet generatedKeys = statement.getGeneratedKeys();
+                if (generatedKeys.next()) {
+                    result = generatedKeys.getLong(1);
+                }
+                generatedKeys.close();
+                saveChildren(connection, studentOrder, result);
+                connection.commit();
+            } catch (SQLException e) {
+                connection.rollback();
+                throw e;
             }
-            generatedKeys.close();
-
-            saveChildren(connection, studentOrder, result);
-
         } catch (SQLException e) {
             throw new DaoException(e);
         }
-
         return result;
     }
 
@@ -93,8 +98,9 @@ public class StudentOrderDaoImpl implements StudentOrderDao {
             for (Child child : studentOrder.getChildren()) {
                 statement.setLong(1, studentOrderId);
                 setParamsForChild(statement, child);
-                statement.executeUpdate();
+                statement.addBatch();
             }
+            statement.executeBatch();
         }
     }
 
