@@ -4,7 +4,6 @@ import edu.student_order.dao.DictionaryDaoImpl;
 import edu.student_order.domain.*;
 import edu.student_order.exception.DaoException;
 
-import java.sql.*;
 import java.time.LocalDate;
 import java.util.List;
 
