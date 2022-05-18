@@ -1,11 +1,11 @@
 package edu.student_order.domain;
 
 public class Address {
+    private String postCode;
     private String street;
     private String building;
     private String extension;
     private String apartment;
-    private String postCode;
 
     public Address(String street, String building, String extension, String apartment, String postCode) {
         this.street = street;

@@ -17,6 +17,7 @@ public class CityRegisterValidator {
     public static final String IN_CODE = "NO_GRN";
     private CityRegisterChecker personChecker;
 
+
     public CityRegisterValidator() {
         personChecker = new RealCityRegisterChecker();
     }
@@ -53,7 +54,9 @@ public class CityRegisterValidator {
             ex.printStackTrace();
         }
 
-        AnswerCityRegisterItem answer = new AnswerCityRegisterItem(status, person, error);
-        return answer;
+        //FIXME
+//        AnswerCityRegisterItem answer = new AnswerCityRegisterItem(status, person, error);
+//        return answer;
+        return null;
     }
 }

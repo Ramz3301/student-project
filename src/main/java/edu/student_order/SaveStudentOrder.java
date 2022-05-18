@@ -2,13 +2,26 @@ package edu.student_order;
 
 import edu.student_order.domain.*;
 
+import java.sql.*;
 import java.time.LocalDate;
 
 public class SaveStudentOrder {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(
+                "jdbc:postgresql://localhost:5432/student_order",
+                "postgres",
+                "1"
+        );
+
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM street");
+        while (resultSet.next()) {
+            System.out.println(resultSet.getLong(1) + " : " + resultSet.getString(2));
+        }
+
 //        StudentOrder sO = new StudentOrder();;
 //        buildStudentOrder();
-
 //        long answer = saveStudentOrder(sO);
 //        System.out.println(answer);
     }
