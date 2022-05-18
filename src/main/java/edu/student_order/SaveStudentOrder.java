@@ -7,9 +7,6 @@ import java.time.LocalDate;
 
 public class SaveStudentOrder {
     public static void main(String[] args) throws DaoException {
-//        StudentOrder studentOrder = buildStudentOrder(10);
-//        StudentOrderDao dao = new StudentOrderDaoImpl();
-//        dao.saveStudentOrder(studentOrder);
     }
 
     static long saveStudentOrder(StudentOrder studentOrder) {
@@ -31,7 +28,6 @@ public class SaveStudentOrder {
 
         Address address = new Address("195000", street, "12", "", "142");
 
-        // Муж
         Adult husband = new Adult("Петров", "Виктор", "Сергеевич", LocalDate.of(1997, 8, 24));
         husband.setPassportSeries("" + (1000 + id));
         husband.setPassportNumber("" + (100000 + id));
@@ -40,7 +36,7 @@ public class SaveStudentOrder {
         husband.setIssueDepartment(po1);
         husband.setStudentId("" + (100000 + id));
         husband.setAddress(address);
-        // Жена
+
         Adult wife = new Adult("Петрова", "Вероника", "Алекссевна", LocalDate.of(1998, 3, 12));
         wife.setPassportSeries("" + (2000 + id));
         wife.setPassportNumber("" + (200000 + id));
@@ -49,14 +45,14 @@ public class SaveStudentOrder {
         wife.setIssueDepartment(po2);
         wife.setStudentId("" + (200000 + id));
         wife.setAddress(address);
-        // Ребенок
+
         Child child1 = new Child("Петрова", "Ирина", "Викторовна", LocalDate.of(2018, 6, 29));
         child1.setCertificateNumber("" + (300000 + id));
         child1.setIssueDate(LocalDate.of(2018, 7, 19));
         RegisterOffice ro2 = new RegisterOffice(2L, "", "");
         child1.setIssueDepartment(ro2);
         child1.setAddress(address);
-        // Ребенок
+
         Child child2 = new Child("Петров", "Евгений", "Викторович", LocalDate.of(2018, 6, 29));
         child2.setCertificateNumber("" + (400000 + id));
         child2.setIssueDate(LocalDate.of(2018, 7, 19));
