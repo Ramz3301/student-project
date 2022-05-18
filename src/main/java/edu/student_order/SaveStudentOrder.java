@@ -14,14 +14,36 @@ public class SaveStudentOrder {
 //            System.out.println(street.getStreetName());
 //        }
 
-        List<PassportOffice> passportOfficeList = new DictionaryDaoImpl().findPassportOffice("010020000");
-        for (PassportOffice passportOffice1 : passportOfficeList) {
-            System.out.println(passportOffice1.getOfficeName());
+//        List<PassportOffice> passportOfficeList = new DictionaryDaoImpl().findPassportOffice("010020000");
+//        for (PassportOffice passportOffice1 : passportOfficeList) {
+//            System.out.println(passportOffice1.getOfficeName());
+//        }
+//
+//        List<RegisterOffice> registerOfficeList = new DictionaryDaoImpl().findRegisterOffice("010010000000");
+//        for (RegisterOffice registerOffice : registerOfficeList) {
+//            System.out.println(registerOffice.getOfficeName());
+//        }
+        List<CountryArea> countryAreaList1 = new DictionaryDaoImpl().findAreas("");
+        for (CountryArea countryArea : countryAreaList1) {
+            System.out.println(countryArea.getAreaId() + " : " + countryArea.getAreaName());
         }
+        System.out.println("=================");
 
-        List<RegisterOffice> registerOfficeList = new DictionaryDaoImpl().findRegisterOffice("010010000000");
-        for (RegisterOffice registerOffice : registerOfficeList) {
-            System.out.println(registerOffice.getOfficeName());
+        List<CountryArea> countryAreaList2 = new DictionaryDaoImpl().findAreas("020000000000");
+        for (CountryArea countryArea : countryAreaList2) {
+            System.out.println(countryArea.getAreaId() + " : " + countryArea.getAreaName());
+        }
+        System.out.println("=================");
+
+        List<CountryArea> countryAreaList3 = new DictionaryDaoImpl().findAreas("020010000000");
+        for (CountryArea countryArea : countryAreaList3) {
+            System.out.println(countryArea.getAreaId() + " : " + countryArea.getAreaName());
+        }
+        System.out.println("=================");
+
+        List<CountryArea> countryAreaList4 = new DictionaryDaoImpl().findAreas("020010010000");
+        for (CountryArea countryArea : countryAreaList4) {
+            System.out.println(countryArea.getAreaId() + " : " + countryArea.getAreaName());
         }
     }
 
