@@ -7,19 +7,6 @@ import java.time.LocalDate;
 
 public class SaveStudentOrder {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        Class.forName("org.postgresql.Driver");
-        Connection connection = DriverManager.getConnection(
-                "jdbc:postgresql://localhost:5432/student_order",
-                "postgres",
-                "1"
-        );
-
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM street");
-        while (resultSet.next()) {
-            System.out.println(resultSet.getLong(1) + " : " + resultSet.getString(2));
-        }
-
 //        StudentOrder sO = new StudentOrder();;
 //        buildStudentOrder();
 //        long answer = saveStudentOrder(sO);
@@ -37,9 +24,11 @@ public class SaveStudentOrder {
         studentOrder.setStudentOrderId(id);
         studentOrder.setMarriageCertificateId("" + (123456000 + id));
         studentOrder.setMarriageDate(LocalDate.of(2022, 5, 18));
+        Street street = new Street(1L, "Panina");
+
 
         Address address =
-                new Address("195000", "Izhorskaya street", "12", "", "142");
+                new Address(street, "Izhorskaya street", "12", "", "142");
 
         Adult husband =
                 new Adult("Ivanov", "Ivan", "Ivanovich", LocalDate.of(1996, 5, 17));
