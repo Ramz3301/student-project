@@ -24,7 +24,7 @@ public class RealCityRegisterChecker implements CityRegisterChecker {
 
         if (person instanceof Adult) {
             Adult adult = (Adult) person;
-            String passportSerial = adult.getPassportSerial();
+            String passportSerial = adult.getPassportSeries();
 
             if (passportSerial.equals(GOOD_1) || passportSerial.equals(GOOD_2)) {
                 response.setExisting(true);

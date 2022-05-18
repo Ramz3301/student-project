@@ -40,6 +40,8 @@ CREATE TABLE register_office
 CREATE TABLE student_order
 (
     student_order_id     SERIAL,
+    student_order_status INTEGER      NOT NULL,
+    student_order_date   TIMESTAMP    NOT NULL,
     h_sur_name           varchar(100) not null,
     h_given_name         varchar(100) not null,
     h_patronymic         varchar(100) not null,
@@ -96,21 +98,30 @@ CREATE TABLE student_child
     FOREIGN KEY (c_register_office_id) REFERENCES register_office (reg_office_id) ON DELETE RESTRICT
 );
 
-SELECT *
-FROM street;
-DELETE
-FROM street
-WHERE street_code > 0;
-
+--
+-- SELECT * FROM street;
 -- INSERT INTO street (street_code, street_name)
--- VALUES (1, 'Panina'),
---        (2, 'Resplublikanskaya'),
---        (3, 'Genkina');
+-- VALUES (1, 'Panina')
 --
--- SELECT street_name, street_code
--- FROM street
--- WHERE street_code IN (1, 3);
---
---
--- SELECT street_code, street_name
--- FROM street;
+-- INSERT INTO register_office (reg_office_id, reg_office_area_id, reg_office_name)
+-- VALUES (1, 100010001000, 'Blahblahblah');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,12 +7,12 @@ public class Address {
     private String extension;
     private String apartment;
 
-    public Address(Street street, String building, String extension, String apartment, String postCode) {
+    public Address(String postCode, Street street, String building, String extension, String apartment) {
+        this.postCode = postCode;
         this.street = street;
         this.building = building;
         this.extension = extension;
         this.apartment = apartment;
-        this.postCode = postCode;
     }
 
     public Street getStreet() {

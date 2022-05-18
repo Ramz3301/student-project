@@ -33,6 +33,7 @@ public class DictionaryDaoImpl implements DictionaryDao {
                     "WHERE area_id LIKE ? " +
                     "AND area_id != ? ";
 
+    //TODO make one method
     private Connection getConnection() throws SQLException {
         Connection connection = DriverManager.getConnection(
                 Config.getProperty(Config.DB_URL),

@@ -3,7 +3,7 @@ package edu.student_order.domain;
 import java.time.LocalDate;
 
 public class Adult extends Person {
-    private String passportSerial;
+    private String passportSeries;
     private String passportNumber;
     private LocalDate issueDate;
     private PassportOffice issueDepartment;
@@ -17,12 +17,12 @@ public class Adult extends Person {
     public Adult() {
     }
 
-    public String getPassportSerial() {
-        return passportSerial;
+    public String getPassportSeries() {
+        return passportSeries;
     }
 
-    public void setPassportSerial(String passportSerial) {
-        this.passportSerial = passportSerial;
+    public void setPassportSeries(String passportSeries) {
+        this.passportSeries = passportSeries;
     }
 
     public String getPassportNumber() {
