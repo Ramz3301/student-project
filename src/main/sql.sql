@@ -102,15 +102,15 @@ DELETE
 FROM street
 WHERE street_code > 0;
 
-INSERT INTO street (street_code, street_name)
-VALUES (1, 'Panina'),
-       (2, 'Resplublikanskaya'),
-       (3, 'Genkina');
-
-SELECT street_name, street_code
-FROM street
-WHERE street_code IN (1, 3);
-
-
-SELECT street_code, street_name
-FROM street;
+-- INSERT INTO street (street_code, street_name)
+-- VALUES (1, 'Panina'),
+--        (2, 'Resplublikanskaya'),
+--        (3, 'Genkina');
+--
+-- SELECT street_name, street_code
+-- FROM street
+-- WHERE street_code IN (1, 3);
+--
+--
+-- SELECT street_code, street_name
+-- FROM street;
